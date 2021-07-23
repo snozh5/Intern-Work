@@ -23,9 +23,9 @@ import pickle
 df = pd.read_csv("iris.csv")
 df.head() #print the top 5 rows of the dataset
 ```
-[![head](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/head.PNG?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/head.PNG)
+![head](Pictures/head.PNG)
 
-The above figure shows the top 5 rows of the dataset. It contains 5 columns of which sepal lenght, sepal width, petal length, petal width are independent variables and species is dependent variable. 
+The above table shows the top 5 rows of the dataset. It contains 5 columns of which sepal lenght, sepal width, petal length, petal width are independent variables and species is dependent variable. 
 
 ### Exploratory Data Analysis (EDA)
 ```sh
@@ -34,7 +34,7 @@ sns.countplot(x="Species", data=df)
 plt.title("Count plot for Species")
 plt.show()
 ```
-[![countplot](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/countplot_species.png?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/countplot_species.png)
+![countplot](Pictures/countplot_species.png)
 
 There are total three Species namely "Setosa", "Versicolor" & "Virginica".
 
@@ -42,7 +42,7 @@ There are total three Species namely "Setosa", "Versicolor" & "Virginica".
 # Pair plot for pairwise relation
 sns.pairplot(data=df, hue='Species')
 ```
-[![pairplot](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/pairplot_species.png?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/pairplot_species.png)
+![pairplot](Pictures/pairplot_species.png)
 
 The pairplot graph gives us the pair wair relationship, from the above graph we can see that "Setosa" species differ from the other two species in terms of relationship.
 
@@ -52,7 +52,7 @@ plt.figure(figsize=(8, 5))
 sns.heatmap(df.corr(),annot=True,fmt="f").set_title("Correlation of attributes with Species")
 plt.show()
 ```
-[![heatmap](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/heatmap.png?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/heatmap.png)
+![heatmap](Pictures/heatmap.png)
 
 The 'Petal Width' and 'Petal Length' are correlated with each other and 'Sepal Width' and 'Sepal Length' are not correlated as shown in the heatmap.
 
@@ -65,7 +65,7 @@ plt.subplot(2,3,2)
 sns.barplot(x="Species", y="Sepal_Width", data=df)
 plt.show()
 ```
-[![sepal](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/barplot_sepal_lengthwidth.PNG?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/barplot_sepal_lengthwidth.PNG)
+![sepal](Pictures/barplot_sepal_lengthwidth.PNG)
 
 For the Sepal length "Virginica" are high while for Sepal width "Setosa" are high on number.
 
@@ -77,7 +77,7 @@ sns.barplot(x="Species", y="Petal_Length", data=df)
 plt.subplot(2,3,2)
 sns.barplot(x="Species", y="Petal_Width", data=df)
 ```
-[![petal](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/barplot_petal_lengthwidth.PNG?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/barplot_petal_lengthwidth.PNG)
+![petal](Pictures/barplot_petal_lengthwidth.PNG)
 
 For both Petal length and Petal width "Virginica" have got the highest number with "Setosa" seems to the lowest on both.
 
@@ -99,9 +99,9 @@ print("accuracy:", metrics.accuracy_score(y_true=y_test, y_pred=y_pred), "\n")
 # cm
 print(metrics.confusion_matrix(y_true=y_test, y_pred=y_pred))
 ```
-[![linear](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/linear.PNG?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/linear.PNG)
+![linear](Pictures/linear.PNG)
 
-The above figure shows the accuracy and confusion matrix for the linear model.
+The above result shows the accuracy and confusion matrix for the linear model.
 
 ```sh
 # non-linear model
@@ -119,9 +119,9 @@ print("accuracy:", metrics.accuracy_score(y_true=y_test, y_pred=y_pred), "\n")
 # cm
 print(metrics.confusion_matrix(y_true=y_test, y_pred=y_pred))
 ```
-[![non-linear](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/nonlinear.PNG?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/nonlinear.PNG)
+![non-linear](Pictures/nonlinear.PNG)
 
-The above figure shows the accuracy and confusion matrix for the non-linear model.
+The above result shows the accuracy and confusion matrix for the non-linear model.
 
 ##### Since the model performed better using kernel as rbf with an accuracy of 95% as compared to 93% for linear kernel. So we will go ahead with the rbf kernel i.e. Non-Linear model.
 
@@ -160,13 +160,13 @@ def predict():
 if __name__ == "__main__":
     flask_app.run(debug=True)
 ```
-[![index](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/index.PNG?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/index.PNG)
+![index](Pictures/index.PNG?raw=true)
 
-The above figure shows the index page which is basically the home page. It is hosted locally at  `http://127.0.0.1:5000`. It is here we give our input data for prediction.  
+The above output shows the index page which is basically the home page. It is hosted locally at  `http://127.0.0.1:5000`. It is here we give our input data for prediction.  
 
-[![predict](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/predicted.PNG?raw=true)](https://github.com/snozh5/temp/blob/main/Pictures_svm_deploy/predicted.PNG)
+![predict](Pictures/predicted.PNG)
 
-The above figure shows the predicted output post clicking the predict button. 
+The above output shows the predicted output post clicking the predict button. 
 
 
 
