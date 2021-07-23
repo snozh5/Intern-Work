@@ -4,10 +4,11 @@
 #### _Iris model classification with SVM deployed using Flask._
 
 ### The folder contains:-
-1. Jupyter notebook where the model is trained.
-2. App.py for model deplyment.
-3. Pictures of output.
-4. Templates folder contain the index page.
+- Jupyter notebook where the model is trained.
+- Pictures of output.
+- Deployment(py file) folder
+  - Templates folder contain the index page.
+  - App.py for model deplyment.
 
 ### Team Name: int-ml-4
 #### Team member name and work distribution
