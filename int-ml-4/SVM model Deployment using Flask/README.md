@@ -3,7 +3,7 @@
 ## SVM Model Deployment using Flask 
 #### _Iris model classification with SVM deployed using Flask._
 
-### The folder contains:-
+### The directory contains:-
 - SVM model using Flask markdown file explaining the dataset as well as deployment process.
 - Pictures of output.
 - Codes_model_deployment
